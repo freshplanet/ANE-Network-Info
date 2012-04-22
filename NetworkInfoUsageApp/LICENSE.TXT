@@ -1,0 +1,13 @@
+ADOBE SYSTEMS INCORPORATED
+ Copyright 2011 Adobe Systems Incorporated
+ All Rights Reserved.
+
+NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the 
+terms of the Adobe license agreement accompanying it.  If you have received this file from a 
+source other than Adobe, then your use, modification, or distribution of it requires the prior 
+written permission of Adobe.
+
+By downloading or viewing this content, you acknowledge that you have read and agree to the Adobe AIR SDK License Agreement, available at http://www.adobe.com/products/air/tools/sdk/eula/ 
+
+These files are considered Sample Code.
+

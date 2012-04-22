@@ -1,0 +1,2 @@
+/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m: In function 'findInterfaces':
+/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m:228: warning: implicit declaration of function 'close'

@@ -1,0 +1,296 @@
+TNetworkInfoiOSLibrary
+v7
+r0
+t337182686.933245
+cCheck dependencies
+cProcessPCH /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-bwwspicuuilwzxbrhvxunragozye/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-cueddemlisfisyfcyrxblopuoqpu/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLibtool /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv6
+cLibtool /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7
+cCreateUniversalBinary /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/libNetworkInfoiOSLibrary.a normal "armv6 armv7"
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
+c000000004CC7DC9E0000000000000110
+t1288166558
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC10F4700000000003E1F20
+t1287720775
+s4071200
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC10F1C0000000000001466
+t1287720732
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
+c000000004CC10E6A000000000000353E
+t1287720554
+s13630
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/arpa/inet.h
+c000000004CB3E4790000000000001533
+t1286857849
+s5427
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/err.h
+c000000004CB3E4B8000000000000110F
+t1286857912
+s4367
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/errno.h
+c000000004CB3E4B800000000000003EB
+t1286857912
+s1003
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/fcntl.h
+c000000004CB3E4B800000000000003EA
+t1286857912
+s1002
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/ifaddrs.h
+c000000004CB3E4840000000000000782
+t1286857860
+s1922
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/net/ethernet.h
+c000000004CBFACDC000000000000101A
+t1287630044
+s4122
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/net/if.h
+c000000004CBFACDC00000000000035E3
+t1287630044
+s13795
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/net/if_dl.h
+c000000004CBFACDC00000000000013E6
+t1287630044
+s5094
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/netdb.h
+c000000004CB3E4A0000000000000307F
+t1286857888
+s12415
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/netinet/in.h
+c000000004CBFACDD0000000000005462
+t1287630045
+s21602
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/stdio.h
+c000000004CB3E4B800000000000040AC
+t1286857912
+s16556
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/string.h
+c000000004CB3E4B80000000000001731
+t1286857912
+s5937
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/ioctl.h
+c000000004CBFACD7000000000000116C
+t1287630039
+s4460
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/socket.h
+c000000004CBFACD80000000000005A69
+t1287630040
+s23145
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/sockio.h
+c000000004CBFACD80000000000002252
+t1287630040
+s8786
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/sysctl.h
+c000000004CBFACD80000000000007974
+t1287630040
+s31092
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/types.h
+c000000004CBFACD90000000000002905
+t1287630041
+s10501
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/stdint.h
+c000000004C5A5787000000000000190C
+t1280989063
+s6412
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/FlashRuntimeExtensions.h
+c000000004E68A8C70000000000004667
+t1315481799
+s18023
+i<stdint.h>
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.h
+c000000004E68A84800000000000000F5
+t1315481672
+s245
+i<Foundation/Foundation.h>
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m
+c000000004E6DF8D200000000000043E4
+t1315829970
+s17380
+i"FlashRuntimeExtensions.h"
+i<stdio.h>
+i<sys/types.h>
+i<ifaddrs.h>
+i<netinet/in.h>
+i<string.h>
+i<arpa/inet.h>
+i<net/if.h>
+i<sys/sockio.h>
+i<sys/ioctl.h>
+i<netdb.h>
+i<sys/sysctl.h>
+i<net/ethernet.h>
+i<net/if_dl.h>
+i<err.h>
+i<errno.h>
+i<fcntl.h>
+i<sys/types.h>
+i<sys/socket.h>
+i<SystemConfiguration/SCNetworkReachability.h>
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary_Prefix.pch
+c000000004E68A7F500000000000000BC
+t1315481589
+s188
+i<Foundation/Foundation.h>
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/libNetworkInfoiOSLibrary.a
+t1315489886
+s49752
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.LinkFileList
+c000000004E68A8D300000000000000A9
+t1315481811
+s169
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o
+t1315489886
+s24584
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a
+t1315489886
+s25040
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.LinkFileList
+c000000004E68A8D300000000000000A9
+t1315481811
+s169
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o
+t1315489886
+s24208
+
+N/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a
+t1315489886
+s24664
+
+N/var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-bwwspicuuilwzxbrhvxunragozye/NetworkInfoiOSLibrary_Prefix.pch.gch
+t1315481811
+s6736452
+
+N/var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-cueddemlisfisyfcyrxblopuoqpu/NetworkInfoiOSLibrary_Prefix.pch.gch
+t1315481811
+s7199300
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies337182686#337182686#0(0"0(0#1#0"8628174560#0"0#
+
+CCompileC build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s337182686.744134
+e337182686.846482
+r1
+xCompileC
+xbuild/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o
+x/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m: In function 'findInterfaces':
+o/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m:228: warning: implicit declaration of function 'close'
+lSLF07#2@78"Compile /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m337182686#337182686#0(228"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m: In function 'findInterfaces':/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m:228: warning: implicit declaration of function 'close'1(22@40"Implicit declaration of function 'close'337182686#102#126#0(6@70"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m337182686#228#0#228#0#36"implicit declaration of function '*'0(0#0#70"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m8627870976#2200"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -mfix-and-continue -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -F/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/include -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv6 -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -include /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-bwwspicuuilwzxbrhvxunragozye/NetworkInfoiOSLibrary_Prefix.pch -c /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m -o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o0#
+
+CCompileC build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s337182686.745520
+e337182686.858893
+r1
+xCompileC
+xbuild/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o
+x/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m: In function 'findInterfaces':
+o/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m:228: warning: implicit declaration of function 'close'
+lSLF07#2@78"Compile /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m337182686#337182686#0(228"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m: In function 'findInterfaces':/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m:228: warning: implicit declaration of function 'close'1(22@40"Implicit declaration of function 'close'337182686#102#126#0(6@70"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m337182686#228#0#228#0#36"implicit declaration of function '*'0(0#0#70"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m8627334720#2200"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -mfix-and-continue -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -F/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/include -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv7 -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -include /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-cueddemlisfisyfcyrxblopuoqpu/NetworkInfoiOSLibrary_Prefix.pch -c /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary.m -o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o0#
+
+CCreateUniversalBinary /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/libNetworkInfoiOSLibrary.a normal "armv6 armv7"
+s337182686.899043
+e337182686.933204
+r1
+xCreateUniversalBinary
+x/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/libNetworkInfoiOSLibrary.a
+xnormal
+xarmv6 armv7
+lSLF07#2@90"CreateUniversalBinary build/Debug-iphoneos/libNetworkInfoiOSLibrary.a normal "armv6 armv7"337182686#337182686#0(0"0(0#0#58"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/armv6 armv78628391488#772"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a -o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/libNetworkInfoiOSLibrary.a0#
+
+CLibtool /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv6
+s337182686.846591
+e337182686.875747
+r1
+xLibtool
+x/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a
+xnormal
+xarmv6
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF07#2@145"Libtool build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv6337182686#337182686#0(129"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"8622327904#934"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv6 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos -filelist /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.LinkFileList -ObjC -framework Foundation -o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a0#
+
+CLibtool /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7
+s337182686.859005
+e337182686.898965
+r1
+xLibtool
+x/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a
+xnormal
+xarmv7
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF07#2@145"Libtool build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7337182686#337182686#0(129"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"8621679136#934"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv7 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos -filelist /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.LinkFileList -ObjC -framework Foundation -o /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a0#
+
+CProcessPCH /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-bwwspicuuilwzxbrhvxunragozye/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s337174611.029583
+e337174611.822264
+r1
+xProcessPCH
+x/var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-bwwspicuuilwzxbrhvxunragozye/NetworkInfoiOSLibrary_Prefix.pch.gch
+xNetworkInfoiOSLibrary_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@43"Precompile NetworkInfoiOSLibrary_Prefix.pch337174611#337174611#0(0"0(0#0#79"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary_Prefix.pch8624512704#2042"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -mfix-and-continue -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -F/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/include -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv6 -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -c /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary_Prefix.pch -o /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-bwwspicuuilwzxbrhvxunragozye/NetworkInfoiOSLibrary_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-cueddemlisfisyfcyrxblopuoqpu/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s337174611.073045
+e337174611.981780
+r1
+xProcessPCH
+x/var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-cueddemlisfisyfcyrxblopuoqpu/NetworkInfoiOSLibrary_Prefix.pch.gch
+xNetworkInfoiOSLibrary_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@43"Precompile NetworkInfoiOSLibrary_Prefix.pch337174611#337174611#0(0"0(0#0#79"/Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary_Prefix.pch8624060736#2042"    cd /Users/gangwar/Downloads/NetworkInfoiOSLibrary    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/SDKs/qnx650/host/darwin/x86/usr/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -mfix-and-continue -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -F/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/Debug-iphoneos/include -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv7 -I/Users/gangwar/Downloads/NetworkInfoiOSLibrary/build/NetworkInfoiOSLibrary.build/Debug-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -c /Users/gangwar/Downloads/NetworkInfoiOSLibrary/NetworkInfoiOSLibrary_Prefix.pch -o /var/folders/ts/ts1sshcnEpqCzLOX8mLNVE+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-cueddemlisfisyfcyrxblopuoqpu/NetworkInfoiOSLibrary_Prefix.pch.gch0#
+
