@@ -1,0 +1,369 @@
+TNetworkInfoiOSLibrary
+v3
+r1
+cCheck dependencies
+cProcessPCH /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/Reachability.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/Reachability.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLibtool /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv6
+cLibtool /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7
+cCreateUniversalBinary /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a normal "armv6 armv7"
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk
+c000000004D9A119B0000000000000110
+t1301942683
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D93DFEB0000000000000AB3
+t1301536747
+s2739
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D93E1FD00000000003E22F0
+t1301537277
+s4072176
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D93E1E60000000000001466
+t1301537254
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SCNetworkReachability.h
+c000000004D93E142000000000000353E
+t1301537090
+s13630
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
+c000000004D93E1420000000000001A58
+t1301537090
+s6744
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004D93E14E00000000000B0CA0
+t1301537102
+s724128
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/arpa/inet.h
+c000000004D93D5EB0000000000001533
+t1301534187
+s5427
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/err.h
+c000000004D4F6E900000000000001240
+t1297051280
+s4672
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/errno.h
+c000000004D4F6E9000000000000003EB
+t1297051280
+s1003
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/fcntl.h
+c000000004D4F6E9000000000000003EA
+t1297051280
+s1002
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/ifaddrs.h
+c000000004D93D5EB00000000000008F5
+t1301534187
+s2293
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/net/ethernet.h
+c000000004D93DB98000000000000101A
+t1301535640
+s4122
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/net/if.h
+c000000004D93DB990000000000003DBA
+t1301535641
+s15802
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/net/if_dl.h
+c000000004D93DB9900000000000013E6
+t1301535641
+s5094
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netdb.h
+c000000004D93D5EB000000000000307F
+t1301534187
+s12415
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netinet/in.h
+c000000004D93DB990000000000006BAC
+t1301535641
+s27564
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netinet6/in6.h
+c000000004D93DB99000000000000638F
+t1301535641
+s25487
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/stdio.h
+c000000004D4F6E910000000000004763
+t1297051281
+s18275
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/string.h
+c000000004D4F6E910000000000001A3A
+t1297051281
+s6714
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/ioctl.h
+c000000004D93DB9D000000000000116C
+t1301535645
+s4460
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/socket.h
+c000000004D93DBA00000000000005ACF
+t1301535648
+s23247
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/sockio.h
+c000000004D93DBA000000000000022F2
+t1301535648
+s8946
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/sysctl.h
+c000000004D93DBA00000000000007D09
+t1301535648
+s32009
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/types.h
+c000000004D93DBA10000000000002905
+t1301535649
+s10501
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/stdint.h
+c000000004D09AD56000000000000190C
+t1292479830
+s6412
+
+N/Users/titi/Downloads/Reachability/Classes/Reachability.h
+c000000004C34EF790000000000000F1B
+t1278537593
+s3867
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../../../Applications/Adobe Flash Builder 4.6/sdks/4.6.0/include/FlashRuntimeExtensions.h
+c000000004F5FD2CD0000000000004FCB
+t1331679949
+s20427
+i<stdint.h>
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.h
+c000000004C34EF790000000000000F1B
+t1278537593
+s3867
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m
+c000000004C34EF79000000000000239B
+t1278537593
+s9115
+i<sys/socket.h>
+i<netinet/in.h>
+i<netinet6/in6.h>
+i<arpa/inet.h>
+i<ifaddrs.h>
+i<netdb.h>
+i<CoreFoundation/CoreFoundation.h>
+i"Reachability.h"
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m
+c000000004F9AEC3B0000000000004AF2
+t1335553083
+s19186
+i"FlashRuntimeExtensions.h"
+i<stdio.h>
+i<sys/types.h>
+i<ifaddrs.h>
+i<netinet/in.h>
+i<string.h>
+i<arpa/inet.h>
+i<net/if.h>
+i<sys/sockio.h>
+i<sys/ioctl.h>
+i<netdb.h>
+i<sys/sysctl.h>
+i<net/ethernet.h>
+i<net/if_dl.h>
+i<err.h>
+i<errno.h>
+i<fcntl.h>
+i<sys/types.h>
+i<sys/socket.h>
+i<SystemConfiguration/SCNetworkReachability.h>
+i"Reachability.h"
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary_Prefix.pch
+c000000004F9AEA800000000000000403
+t1335552640
+s1027
+i<Foundation/Foundation.h>
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.LinkFileList
+c000000004F9AF546000000000000014B
+t1335555398
+s331
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o
+t2
+s0
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/Reachability.o
+t2
+s0
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a
+t2
+s0
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.LinkFileList
+c000000004F9AF546000000000000014B
+t1335555398
+s331
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o
+t2
+s0
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/Reachability.o
+t2
+s0
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a
+t2
+s0
+
+N/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a
+t2
+s0
+
+N/var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch.gch
+t2
+s0
+
+N/var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch.gch
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesda1a95c62c4bb541^8541b9c62c4bb541^---0#1#0#--18"Check dependencies
+
+CCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s357248199.285015
+e357248199.643688
+r1
+xCompileC
+xbuild/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m9a2549c72c4bb541^d6c6a4c72c4bb541^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m0000000000000000^2655"CompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o NetworkInfoiOSLibrary.m normal armv6 objective-c com.apple.compilers.gcc.4_2    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/include -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv6 -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -F/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -include /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch -c /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.o
+
+CCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/Reachability.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s357248199.285633
+e357248199.636188
+r1
+xCompileC
+xbuild/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/Reachability.o
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.mb24a49c72c4bb541^0037a3c72c4bb541^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m0000000000000000^2699"CompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/Reachability.o ../../../Downloads/Reachability/Classes/Reachability.m normal armv6 objective-c com.apple.compilers.gcc.4_2    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/include -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv6 -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -F/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -include /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch -c /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/Reachability.o
+
+CCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s357248199.285648
+e357248199.684580
+r1
+xCompileC
+xbuild/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.maa4849c72c4bb541^853fafc72c4bb541^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m0000000000000000^2655"CompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o NetworkInfoiOSLibrary.m normal armv7 objective-c com.apple.compilers.gcc.4_2    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/include -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv7 -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -F/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -include /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch -c /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary.m -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.o
+
+CCompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/Reachability.o /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s357248199.285924
+e357248199.626953
+r1
+xCompileC
+xbuild/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/Reachability.o
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m605949c72c4bb541^be86a0c72c4bb541^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m0000000000000000^2699"CompileC build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/Reachability.o ../../../Downloads/Reachability/Classes/Reachability.m normal armv7 objective-c com.apple.compilers.gcc.4_2    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/include -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv7 -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -F/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -include /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch -c /Users/titi/Projects/AirNetworkInfo/NativeIOS/../../../Downloads/Reachability/Classes/Reachability.m -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/Reachability.o
+
+CCreateUniversalBinary /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a normal "armv6 armv7"
+s357248199.741373
+e357248199.785795
+r1
+xCreateUniversalBinary
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a
+xnormal
+xarmv6 armv7
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Create universal binary /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a19e5bdc72c4bb541^1728c9c72c4bb541^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a00f4f4a1dfffdf42^1128"CreateUniversalBinary build/Release-iphoneos/libNetworkInfoiOSLibrary.a normal "armv6 armv7"    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/libNetworkInfoiOSLibrary.a
+
+CLibtool /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv6
+s357248199.651181
+e357248199.683259
+r1
+xLibtool
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a
+xnormal
+xarmv6
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Libtool build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv672dfa6c72c4bb541^4be8aec72c4bb541^---0#0#0#--1376"Libtool build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a normal armv6    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv6 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -filelist /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/NetworkInfoiOSLibrary.LinkFileList -ObjC -framework Foundation -framework SystemConfiguration -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv6/libNetworkInfoiOSLibrary.a
+
+CLibtool /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7
+s357248199.691992
+e357248199.735106
+r1
+xLibtool
+x/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a
+xnormal
+xarmv7
+o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Libtool build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7a645b1c72c4bb541^8c31bcc72c4bb541^---0#0#0#--1376"Libtool build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a normal armv7    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv7 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -filelist /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/NetworkInfoiOSLibrary.LinkFileList -ObjC -framework Foundation -framework SystemConfiguration -o /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/Objects-normal/armv7/libNetworkInfoiOSLibrary.a
+
+CProcessPCH /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s357248198.733598
+e357248199.278151
+r1
+xProcessPCH
+x/var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch.gch
+xNetworkInfoiOSLibrary_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile NetworkInfoiOSLibrary_Prefix.pch5707bcc62c4bb541^713847c72c4bb541^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary_Prefix.pch0000000000000000^2572"ProcessPCH /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/include -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv7 -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -F/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -c /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary_Prefix.pch -o /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-apustvxpdichtjfpstrwzdipinth/NetworkInfoiOSLibrary_Prefix.pch.gch
+
+CProcessPCH /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s357248198.733591
+e357248199.278416
+r1
+xProcessPCH
+x/var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch.gch
+xNetworkInfoiOSLibrary_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile NetworkInfoiOSLibrary_Prefix.pch4e09bcc62c4bb541^7d5847c72c4bb541^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary_Prefix.pch0000000000000000^2572"ProcessPCH /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch.gch NetworkInfoiOSLibrary_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2    cd /Users/titi/Projects/AirNetworkInfo/NativeIOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249/bin:/Users/titi/.rvm/gems/ruby-1.8.7-p249@global/bin:/Users/titi/.rvm/rubies/ruby-1.8.7-p249/bin:/Users/titi/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/titi/bin:/Users/titi/.gem/ruby/1.8/bin:/bin:/usr/local/Cellar/cloud-watch/1.0.2.3/jars/bin:/usr/local/Cellar/auto-scaling/1.0.33.1/jars/bin:/bin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-generated-files.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-own-target-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-all-target-headers.hmap -iquote /Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/NetworkInfoiOSLibrary-project-headers.hmap -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos/include -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources/armv6 -I/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/NetworkInfoiOSLibrary.build/Release-iphoneos/NetworkInfoiOSLibrary.build/DerivedSources -F/Users/titi/Projects/AirNetworkInfo/NativeIOS/build/Release-iphoneos -c /Users/titi/Projects/AirNetworkInfo/NativeIOS/NetworkInfoiOSLibrary_Prefix.pch -o /var/folders/5k/z80853k16hn_mm7cjjznwfjc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NetworkInfoiOSLibrary_Prefix-fkqqdzqyijkalegeqnkpquenrpli/NetworkInfoiOSLibrary_Prefix.pch.gch
+

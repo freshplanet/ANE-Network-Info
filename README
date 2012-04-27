@@ -1,0 +1,22 @@
+# AirNetworkInfo
+AirNetworkInfo is an ADOBE AIR Native Extension (ANE) to test if the current device has an active connection.
+It works both for iOS and Android devices.
+
+
+# Use
+Call the function AirNetworkInfo.networkInfo.isConnected() to check the current status of the device.
+For Android devices, you need to enable the following permissions:
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+in order to make it work (otherwise the returned state will always be not connected).
+
+
+# Installation
+The ANE is already compiled. You can find under the folder Binaries. 
+If you want to recompile it, just run ant in the same directory, after changing the parameters (called properties) in build.xml.
+
+# IOS Compilation
+The iOS library has been compiled using the sdk iOS 4.3 and deployment target set to iOS 4.0, using GCC 4.2.
+This ANE has NOT been tested with an sdk version superior to iOS 4.3.
+
+It is distributed under Apache 2.0 license.
