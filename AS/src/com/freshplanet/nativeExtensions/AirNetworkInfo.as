@@ -66,6 +66,55 @@ package com.freshplanet.nativeExtensions
 			}
 		}
 		
+		
+		public function isConnectedWithWIFI():Boolean
+		{
+			if (this.useNativeExtension())
+			{
+				return isNativeConnectedWithWIFI();
+			} else
+			{
+				return isNotNativeConnectedWithWIFI();
+			}
+		}
+		
+		
+		private function isNativeConnectedWithWIFI():Boolean
+		{
+			var interfaces:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
+			
+			for(var i:uint = 0; i < interfaces.length; i++)
+			{
+				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active)
+				if (interfaces[i].active && interfaces[i].name.toLocaleLowerCase() == "en0")
+				{
+					return true;
+				}
+			}
+			return false;
+
+		}
+		
+		
+		private function isNotNativeConnectedWithWIFI():Boolean
+		{
+			var interfaces:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
+			
+			for(var i:uint = 0; i < interfaces.length; i++)
+			{
+				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active)
+				if (interfaces[i].active && ["en0", "wifi"].indexOf(interfaces[i].name.toLocaleLowerCase()))
+				{
+					return true;
+				}
+			}
+			return false;
+			
+		}
+
+		
+		
+		
 		private function hasNativeActiveConnection():Boolean
 		{
 			var interfaces:Vector.<NativeNetworkInterface> = this.findInterfaces();
@@ -76,7 +125,8 @@ package com.freshplanet.nativeExtensions
 
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
-				trace(interfaces[i].name.toLowerCase(), interfaces[i].active)
+
+				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active)
 				if (interfaces[i].active)
 				{
 					return true;
@@ -93,7 +143,7 @@ package com.freshplanet.nativeExtensions
 			
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
-				trace(interfaces[i].name.toLowerCase(), interfaces[i].active)
+				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active)
 				if (interfaces[i].active)
 				{
 					return true;
