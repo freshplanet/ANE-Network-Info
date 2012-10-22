@@ -81,7 +81,7 @@ package com.freshplanet.nativeExtensions
 		
 		private function isNativeConnectedWithWIFI():Boolean
 		{
-			var interfaces:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
+			var interfaces:Vector.<NativeNetworkInterface> = this.findInterfaces();
 			
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
