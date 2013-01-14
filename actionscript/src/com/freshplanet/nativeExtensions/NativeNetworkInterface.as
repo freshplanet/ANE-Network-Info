@@ -29,19 +29,17 @@ package com.freshplanet.nativeExtensions
 		private var _mtu:int = -1;
 		private var _hardwareAddress:String = "";
 		private var _active:Boolean = false;
+		private var _addresses:Vector.<InterfaceAddress> = new Vector.<InterfaceAddress> ;
 		
-		
-		
-		public function NativeNetworkInterface(nm:String,dName:String,mt:int,active:Boolean ,hwaddrs:String,addrs:Array):void
+		public function NativeNetworkInterface(nm:String, dName:String, mt:int, active:Boolean, hwaddrs:String, addrs:Array):void
 		{		
 			_name = nm;
 			_displayName = dName;
 			_mtu = mt;
 			_hardwareAddress = hwaddrs;
 			_active= active;
-			
+			_addresses =  Vector.<InterfaceAddress>(addrs);	
 		}
-		
 		
 		public function get name():String
 		{
@@ -66,6 +64,11 @@ package com.freshplanet.nativeExtensions
 		public function get active():Boolean
 		{
 			return (_active);
+		}
+		
+		public function get addresses():Vector.<InterfaceAddress>
+		{   
+			return (_addresses);
 		}
 		
 	}
