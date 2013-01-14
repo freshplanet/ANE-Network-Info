@@ -112,9 +112,6 @@ package com.freshplanet.nativeExtensions
 			
 		}
 
-		
-		
-		
 		private function hasNativeActiveConnection():Boolean
 		{
 			var interfaces:Vector.<NativeNetworkInterface> = this.findInterfaces();
@@ -152,16 +149,44 @@ package com.freshplanet.nativeExtensions
 			return false;
 		}
 		
-		
 		// findInterfaces() finds the network interfaces on the device.
 		public function findInterfaces():Vector.<NativeNetworkInterface>
 		{  
 			var rarr:Vector.<NativeNetworkInterface>;
-			var arr:Array = extContext.call("getInterfaces") as Array ;
-			var i:int = 0;
-			rarr = Vector.<NativeNetworkInterface>(arr);
-			
+			var arr:Array;
+			if( useNativeExtension() ){
+				arr = extContext.call("getInterfaces") as Array ;
+				rarr = Vector.<NativeNetworkInterface>(arr);
+			} else {
+				
+				var interfaces:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
+				arr = [];
+				for each( var device:NetworkInterface in interfaces ){
+					var nativeNetworkInterface:NativeNetworkInterface = new NativeNetworkInterface(
+							device.name,
+							device.displayName,
+							device.mtu,
+							device.active,
+							device.hardwareAddress,
+							addressesToArray(device.addresses)
+						);
+					arr.push(nativeNetworkInterface);
+				}
+				rarr = Vector.<NativeNetworkInterface>(arr);
+				
+			}
+				
 			return rarr;		
+		}
+		
+		private function addressesToArray(addresses:Vector.<flash.net.InterfaceAddress>):Array
+		{
+			var result:Array = [];
+			for each (var ia:flash.net.InterfaceAddress in addresses ){
+				var na:InterfaceAddress = new InterfaceAddress(ia.address, ia.broadcast, ia.prefixLength, ia.ipVersion);
+				result.push(na);
+			}
+			return result;
 		}
 		
 		private function useNativeExtension():Boolean
