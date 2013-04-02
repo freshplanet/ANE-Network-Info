@@ -19,6 +19,5 @@
 -->
 <platform xmlns="http://ns.adobe.com/air/extension/3.1">
     <sdkVersion>6.0</sdkVersion>
-    <linkerOptions>
-    </linkerOptions> 
+    <linkerOptions></linkerOptions>
 </platform>
