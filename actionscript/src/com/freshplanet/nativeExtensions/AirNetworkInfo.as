@@ -103,7 +103,7 @@ package com.freshplanet.nativeExtensions
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
 				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active)
-				if (interfaces[i].active && ["en0", "wifi"].indexOf(interfaces[i].name.toLocaleLowerCase()))
+				if (interfaces[i].active && ["en0", "wifi"].indexOf(interfaces[i].name.toLocaleLowerCase()) >= 0)
 				{
 					return true;
 				}
