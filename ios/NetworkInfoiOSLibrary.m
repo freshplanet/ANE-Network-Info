@@ -535,6 +535,10 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
 	func[0].name = (const uint8_t*)"getInterfaces";
 	func[0].functionData = NULL;
 	func[0].function = &findInterfaces;
+    
+    func[1].name = (const uint8_t*)"setLogging";
+	func[1].functionData = NULL;
+	func[1].function = &netWorkInfoSetLogging;
 	
 	*functionsToSet = func;
     
