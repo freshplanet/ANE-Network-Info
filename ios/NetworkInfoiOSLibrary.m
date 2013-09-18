@@ -527,10 +527,12 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
 						uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet) {
 	
     if(doLogging)
-        NSLog(@"Entering ContextInitializer()");
+        NSLog(@"Entering NetworkInfoContextInitializer()");
     
-	*numFunctionsToTest = 1;
-	FRENamedFunction* func = (FRENamedFunction*)malloc(sizeof(FRENamedFunction) * 1);
+    NSInteger numFunctionsToSet = 2;
+	*numFunctionsToTest = numFunctionsToSet;
+    
+	FRENamedFunction* func = (FRENamedFunction*)malloc(sizeof(FRENamedFunction) * 2);
     
 	func[0].name = (const uint8_t*)"getInterfaces";
 	func[0].functionData = NULL;
@@ -543,7 +545,7 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
 	*functionsToSet = func;
     
     if(doLogging)
-        NSLog(@"Exiting ContextInitializer()");
+        NSLog(@"Exiting NetworkInfoContextInitializer()");
 }
 
 
@@ -558,12 +560,12 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
 void NetworkInfoContextFinalizer(FREContext ctx) {
 	
     if(doLogging)
-        NSLog(@"Entering ContextFinalizer()");
+        NSLog(@"Entering NetworkInfoContextFinalizer()");
     
     // Nothing to clean up.
 	
     if(doLogging)
-        NSLog(@"Exiting ContextFinalizer()");
+        NSLog(@"Exiting NetworkInfoContextFinalizer()");
     
 	return;
 }
@@ -579,14 +581,14 @@ void NetworkInfoExtInitializer(void** extDataToSet, FREContextInitializer* ctxIn
 					FREContextFinalizer* ctxFinalizerToSet) {
 	
     if(doLogging)
-        NSLog(@"Entering ExtInitializer()");
+        NSLog(@"Entering NetworkInfoExtInitializer()");
     
 	*extDataToSet = NULL;
 	*ctxInitializerToSet = &NetworkInfoContextInitializer;
 	*ctxFinalizerToSet = &NetworkInfoContextFinalizer;
     
     if(doLogging)
-        NSLog(@"Exiting ExtInitializer()");
+        NSLog(@"Exiting NetworkInfoExtInitializer()");
 } 
 
 
@@ -598,12 +600,12 @@ void NetworkInfoExtInitializer(void** extDataToSet, FREContextInitializer* ctxIn
 void NetworkInfoExtFinalizer(void* extData) {
 	
     if(doLogging)
-        NSLog(@"Entering ExtFinalizer()");
+        NSLog(@"Entering NetworkInfoExtFinalizer()");
 	
 	// Nothing to clean up.
 	
     if(doLogging)
-        NSLog(@"Exiting ExtFinalizer()");
+        NSLog(@"Exiting NetworkInfoExtFinalizer()");
     
 	return;
 }
