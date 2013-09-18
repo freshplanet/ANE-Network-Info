@@ -44,6 +44,7 @@ void * tmpbroadPtr = NULL;
 char * iPVersion = "IPV4";
 int PrefixLength = -1;
 struct ifreq ifr;
+bool doLogging = false;
 
 // InterfaceAddrsArray is used as a working variable in getInterfaceProperties()
 
@@ -74,7 +75,14 @@ FREObject InterfacePropArray = NULL ;
 FREObject getInterfaceProperties(struct ifaddrs *ifa);
 
 
-
+FREObject netWorkInfoSetLogging(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+{
+    unsigned int loggingValue = 0;
+    if (FREGetObjectAsBool(argv[0], &loggingValue) == FRE_OK)
+        doLogging = (loggingValue != 0);
+    
+    return nil;
+}
 
 
 // findInterfaces() 
@@ -85,7 +93,8 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa);
 FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
 {
 	
-    NSLog(@"Entering findInterfaces()");
+    if(doLogging)
+        NSLog(@"Entering findInterfaces()");
     
 	struct ifaddrs * ifAddrStruct = NULL;
 	struct ifaddrs * ifa = NULL;
@@ -237,7 +246,8 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
                 //Ioctl Call to find MTU
                 if (ioctl(s,SIOCGIFMTU, (caddr_t) &ifr) >= 0)
                 {
-                    NSLog(@"findInterfaces(): MTU: %d", ifr.ifr_mtu);
+                    if(doLogging)
+                        NSLog(@"findInterfaces(): MTU: %d", ifr.ifr_mtu);
                     FRENewObjectFromInt32(ifr.ifr_mtu, &NetworkInterfaceArray[2]);
 					
                 }			
@@ -249,7 +259,8 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
 		
 		
 		
-		NSLog(@"+++++++++++++++++++++++++++++++++++++++++++To trace j (): Before Interface Properties for interface name %s and value of j is %d",ifa->ifa_name,j );	
+		if(doLogging)
+            NSLog(@"+++++++++++++++++++++++++++++++++++++++++++To trace j (): Before Interface Properties for interface name %s and value of j is %d",ifa->ifa_name,j );
         
         // Each interface can have more than one element in its InterfacePropArray array.
         // This relationship corresponds to how on the ActionScript side, a NetworkInterface object
@@ -273,7 +284,8 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
 	
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++all the interfaces has been iterated +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	
-	NSLog(@" ++++++++++++++++++++++++++++++++++++++++++++++++++Exiting FOR LOOP and pushing array for last time ++++++++++");		
+	if(doLogging)
+        NSLog(@" ++++++++++++++++++++++++++++++++++++++++++++++++++Exiting FOR LOOP and pushing array for last time ++++++++++");
 	
 	
 	// Assign InterfacePropArray to the NetworkInterfaceArray                                              
@@ -301,7 +313,8 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
 	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	if (ifAddrStruct != NULL)  freeifaddrs(ifAddrStruct);
     
-    NSLog(@"Exiting findInterfaces()");
+    if(doLogging)
+        NSLog(@"Exiting findInterfaces()");
     
 	// Return returnInterfacesArray to ActionScript Code 
     return returnInterfacesArray;
@@ -316,7 +329,8 @@ FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObjec
 
 FREObject getInterfaceProperties(struct ifaddrs *ifa)  
 { 
-    NSLog(@"Entering getInterfaceProperties()");
+    if(doLogging)
+        NSLog(@"Entering getInterfaceProperties()");
 	
 	FREObject Addrstemp = nil;
 	BOOL state = FALSE;
@@ -373,7 +387,8 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 		{ 
 			if (strcmp(ifa->ifa_name, "en0") == 0 )
 			{
-				NSLog(@"Check the Reachibility through Wifi ++++++++++++++++++++++++++++++++ ");
+				if(doLogging)
+                    NSLog(@"Check the Reachibility through Wifi ++++++++++++++++++++++++++++++++ ");
 				
 				if (!(flags & kSCNetworkReachabilityFlagsIsWWAN)) 
 				{
@@ -382,7 +397,8 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 				}
 				else
                 {
-					NSLog(@"Wifi is not Reachable ++++++++++++++++++++++++++++++++ ");
+					if(doLogging)
+                        NSLog(@"Wifi is not Reachable ++++++++++++++++++++++++++++++++ ");
 			    }
             }
 	        else 
@@ -392,7 +408,8 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 				
 				if ([string1 rangeOfString:@"pdp"].location == NSNotFound) 
 				{
-					NSLog(@"Device does not contain Cellular network");
+					if(doLogging)
+                        NSLog(@"Device does not contain Cellular network");
 				}			   
 				else     
 				{
@@ -403,7 +420,8 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 					}
 				    else
                     {
-						NSLog(@"Cellular  Connection is not Reachable ++++++++++++++++++++++++++++++++ ");
+						if(doLogging)
+                            NSLog(@"Cellular  Connection is not Reachable ++++++++++++++++++++++++++++++++ ");
                     }
 				}
 				
@@ -418,12 +436,14 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
         // Create a new ActionScript object for the IP address, and put it in InterfaceAddrsArray.
 		FRENewObjectFromUTF8(INET_ADDRSTRLEN, (const uint8_t*)addressBuffer, &InterfaceAddrsArray[0]);
         
-	    NSLog(@"IP4$ address ++++++++++++++++++++++++++++++++ %s",addressBuffer);
+	    if(doLogging)
+            NSLog(@"IP4$ address ++++++++++++++++++++++++++++++++ %s",addressBuffer);
         // Create a new ActionScript object for the broadcast address, and put it in InterfaceAddrsArray.
         
         FRENewObjectFromUTF8(INET_ADDRSTRLEN, (const uint8_t*)broadCastAddressBuffer, &InterfaceAddrsArray[1]);
         
-		NSLog(@"Broadcast$ address ++++++++++++++++++++++++++++++++ %s",broadCastAddressBuffer);
+		if(doLogging)
+            NSLog(@"Broadcast$ address ++++++++++++++++++++++++++++++++ %s",broadCastAddressBuffer);
         // Create a new ActionScript object for the prefix length, and put it in InterfaceAddrsArray.
         
         // Note: The PrefixLength is not currently supported. It has the value -1.
@@ -448,7 +468,8 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 		
         // Create a new ActionScript object for the IP address, and put it in InterfaceAddrsArray.
         FRENewObjectFromUTF8(INET6_ADDRSTRLEN, (const uint8_t*)addressBuffer, &InterfaceAddrsArray[0]); 
-		NSLog(@"IP6$ address ++++++++++++++++++++++++++++++++ %s",addressBuffer);
+		if(doLogging)
+            NSLog(@"IP6$ address ++++++++++++++++++++++++++++++++ %s",addressBuffer);
 		
         // Create a new ActionScript object for the broadcast address, and put it in InterfaceAddrsArray.
         FRENewObjectFromUTF8(INET_ADDRSTRLEN, (const uint8_t*)broadCastForIpv6, &InterfaceAddrsArray[1]);
@@ -469,10 +490,12 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 	if (FRE_OK != 
         FRENewObject((const uint8_t*)"com.freshplanet.nativeExtensions.InterfaceAddress", 4, InterfaceAddrsArray, &Addrstemp, nil))
     {
-		NSLog(@"FRENewObject failed; Addrstemp invalid.");
+		if(doLogging)
+            NSLog(@"FRENewObject failed; Addrstemp invalid.");
     }
 	
-    NSLog(@"Exiting getInterfaceProperties()");
+    if(doLogging)
+        NSLog(@"Exiting getInterfaceProperties()");
     
 	return Addrstemp;
 }
@@ -503,7 +526,8 @@ FREObject connectedToNetwork(FREContext ctx, void* funcData, uint32_t argc, FREO
 void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, 
 						uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet) {
 	
-    NSLog(@"Entering ContextInitializer()");
+    if(doLogging)
+        NSLog(@"Entering ContextInitializer()");
     
 	*numFunctionsToTest = 1;
 	FRENamedFunction* func = (FRENamedFunction*)malloc(sizeof(FRENamedFunction) * 1);
@@ -514,7 +538,8 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
 	
 	*functionsToSet = func;
     
-    NSLog(@"Exiting ContextInitializer()");
+    if(doLogging)
+        NSLog(@"Exiting ContextInitializer()");
 }
 
 
@@ -528,11 +553,13 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
 
 void NetworkInfoContextFinalizer(FREContext ctx) {
 	
-    NSLog(@"Entering ContextFinalizer()");
+    if(doLogging)
+        NSLog(@"Entering ContextFinalizer()");
     
     // Nothing to clean up.
 	
-    NSLog(@"Exiting ContextFinalizer()");
+    if(doLogging)
+        NSLog(@"Exiting ContextFinalizer()");
     
 	return;
 }
@@ -547,13 +574,15 @@ void NetworkInfoContextFinalizer(FREContext ctx) {
 void NetworkInfoExtInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, 
 					FREContextFinalizer* ctxFinalizerToSet) {
 	
-    NSLog(@"Entering ExtInitializer()");
+    if(doLogging)
+        NSLog(@"Entering ExtInitializer()");
     
 	*extDataToSet = NULL;
 	*ctxInitializerToSet = &NetworkInfoContextInitializer;
 	*ctxFinalizerToSet = &NetworkInfoContextFinalizer;
     
-    NSLog(@"Exiting ExtInitializer()");
+    if(doLogging)
+        NSLog(@"Exiting ExtInitializer()");
 } 
 
 
@@ -564,11 +593,13 @@ void NetworkInfoExtInitializer(void** extDataToSet, FREContextInitializer* ctxIn
 
 void NetworkInfoExtFinalizer(void* extData) {
 	
-    NSLog(@"Entering ExtFinalizer()");
+    if(doLogging)
+        NSLog(@"Entering ExtFinalizer()");
 	
 	// Nothing to clean up.
 	
-    NSLog(@"Exiting ExtFinalizer()");
+    if(doLogging)
+        NSLog(@"Exiting ExtFinalizer()");
     
 	return;
 }
