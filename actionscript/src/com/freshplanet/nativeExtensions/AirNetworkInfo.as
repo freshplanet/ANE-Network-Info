@@ -33,6 +33,7 @@ package com.freshplanet.nativeExtensions
 	
 	public class AirNetworkInfo
 	{
+		private static var doLogging:Boolean = false;
 		private static var extContext:ExtensionContext = null;
 		
 		private static var _instance:AirNetworkInfo = null;
@@ -50,6 +51,12 @@ package com.freshplanet.nativeExtensions
 			
 			return _instance != null ? _instance : new AirNetworkInfo()
 		} 
+		
+		public function setLogging(value:Boolean):void
+		{
+			doLogging = value;
+			extContext.call("setLogging", doLogging)
+		}
 		
 		/**
 		 * Check the current connectivity of the device
@@ -85,7 +92,9 @@ package com.freshplanet.nativeExtensions
 			
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
-				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active)
+				if(doLogging)
+					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active);
+				
 				if (interfaces[i].active && interfaces[i].name.toLocaleLowerCase() == "en0")
 				{
 					return true;
@@ -102,7 +111,9 @@ package com.freshplanet.nativeExtensions
 			
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
-				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active)
+				if(doLogging)
+					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active);
+				
 				if (interfaces[i].active && ["en0", "wifi"].indexOf(interfaces[i].name.toLocaleLowerCase()))
 				{
 					return true;
@@ -125,8 +136,9 @@ package com.freshplanet.nativeExtensions
 
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
-
-				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active)
+				if(doLogging)
+					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active);
+				
 				if (interfaces[i].active)
 				{
 					return true;
@@ -143,7 +155,9 @@ package com.freshplanet.nativeExtensions
 			
 			for(var i:uint = 0; i < interfaces.length; i++)
 			{
-				trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active)
+				if(doLogging)
+					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active);
+				
 				if (interfaces[i].active)
 				{
 					return true;
