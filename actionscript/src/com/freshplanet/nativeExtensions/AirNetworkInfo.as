@@ -55,7 +55,9 @@ package com.freshplanet.nativeExtensions
 		public function setLogging(value:Boolean):void
 		{
 			doLogging = value;
-			extContext.call("setLogging", doLogging)
+			if(this.useNativeExtension()) {
+				extContext.call("setLogging", doLogging);
+			}
 		}
 		
 		/**
