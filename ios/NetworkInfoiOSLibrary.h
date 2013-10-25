@@ -17,10 +17,13 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Reachability.h"
+#import "FlashRuntimeExtensions.h"
 
 
-@interface NetworkInfoiOSLibrary : NSObject {
+@interface NetworkInfoiOSLibrary : NSObject
+    
 
-}
 
 @end

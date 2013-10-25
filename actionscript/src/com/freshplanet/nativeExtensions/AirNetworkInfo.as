@@ -18,6 +18,9 @@
 
 package com.freshplanet.nativeExtensions
 {
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
 	import flash.net.NetworkInfo;
 	import flash.net.NetworkInterface;
@@ -31,7 +34,7 @@ package com.freshplanet.nativeExtensions
 	// To get the single NetworkInfo object, use the static NetworkInfo.networkInfo property. 
 	// Do not call the class constructor by calling new NetworkInfo().
 	
-	public class AirNetworkInfo
+	public class AirNetworkInfo extends EventDispatcher
 	{
 		private static var doLogging:Boolean = false;
 		private static var extContext:ExtensionContext = null;
@@ -44,7 +47,22 @@ package com.freshplanet.nativeExtensions
 			// To get the single NetworkInfo object, use the static NetworkInfo.networkInfo property. 
 			// Do not use new NetworkInfo() in the application that uses this class.			
 			extContext = ExtensionContext.createExtensionContext("com.freshplanet.AirNetworkInfo", "net");
+			if(!useNativeExtension()) {
+				NetworkInfo.networkInfo.addEventListener("networkChange", onNetworkChange);
+			} else if (extContext) {
+				extContext.addEventListener(StatusEvent.STATUS, onStatusEvent);
+			}
 			_instance = this;
+		}
+		
+		private function onStatusEvent(e:StatusEvent):void 
+		{
+			this.dispatchEvent(new Event(e.code));
+		}
+		
+		private function onNetworkChange(e:Event):void 
+		{
+			this.dispatchEvent(e);
 		}
 		
 		public static function get networkInfo():AirNetworkInfo {
