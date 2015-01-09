@@ -37,6 +37,8 @@ Usage
 
 Call the function *AirNetworkInfo.networkInfo.isConnected()* to check the current network status of the device.
 
+Notes:
+* included binary has been compiled for 64-bit iOS support
 
 Build script
 ---------
