@@ -39,7 +39,7 @@
 #import <UIKit/UIApplication.h>
 #import <SystemConfiguration/SCNetworkReachability.h>
 #import "Reachability.h"
-
+#import "FPANEUtils.h"
 
 static FREContext AirNICtx = nil;
 
@@ -90,8 +90,6 @@ int PrefixLength = -1;
 struct ifreq ifr;
 bool _networkInfoDoLogging = false;
 
-
-
 // InterfaceAddrsArray is used as a working variable in getInterfaceProperties()
 
 FREObject InterfaceAddrsArray[4];
@@ -121,7 +119,7 @@ FREObject InterfacePropArray = NULL ;
 FREObject getInterfaceProperties(struct ifaddrs *ifa);
 
 
-FREObject netWorkInfoSetLogging(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+DEFINE_ANE_FUNCTION(netWorkInfoSetLogging)
 {
     unsigned int loggingValue = 0;
     if (FREGetObjectAsBool(argv[0], &loggingValue) == FRE_OK)
@@ -136,7 +134,7 @@ FREObject netWorkInfoSetLogging(FREContext ctx, void* funcData, uint32_t argc, F
 // This function finds all the network interfaces, and returns them in an array
 // of ActionScript NetworkInterface objects.
 
-FREObject findInterfaces(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+DEFINE_ANE_FUNCTION(findInterfaces)
 {
 	
     if(_networkInfoDoLogging)
@@ -546,23 +544,18 @@ FREObject getInterfaceProperties(struct ifaddrs *ifa)
 	return Addrstemp;
 }
 
-
-/*
-FREObject connectedToNetwork(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+DEFINE_ANE_FUNCTION(networkInfoConnectivityStatus)
 {
-    Reachability *r = [Reachability reachabilityWithHostName:@"www.google.com"];
-	NetworkStatus internetStatus = [r currentReachabilityStatus];
-	BOOL internet;
-	if ((internetStatus != ReachableViaWiFi) && (internetStatus != ReachableViaWWAN)) {
-		internet = NO;
-	} else {
-		internet = YES;
-	}
-    FREObject retVal = 
-	return internet;   
-}*/
 
-
+    if (!reachability)
+    {
+        reachability = [Reachability reachabilityForInternetConnection];;
+    }
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    BOOL connectionRequired = [reachability connectionRequired];
+    NSLog(@"network status %li, connection required: %i", (long) netStatus, connectionRequired);
+    return FPANE_IntToFREObject(netStatus);
+}
 
 
 // ContextInitializer()
@@ -581,19 +574,23 @@ void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FRECon
     
     [NetworkInfoiOSLibrary startNetworkChangeNotifier];
     
-    NSInteger numFunctionsToSet = 2;
+    NSInteger numFunctionsToSet = 3;
 	*numFunctionsToTest = numFunctionsToSet;
     
 	FRENamedFunction* func = (FRENamedFunction*)malloc(sizeof(FRENamedFunction) * 2);
     
 	func[0].name = (const uint8_t*)"getInterfaces";
 	func[0].functionData = NULL;
-func[0].function = &findInterfaces;
+    func[0].function = &findInterfaces;
     
     func[1].name = (const uint8_t*)"setLogging";
 	func[1].functionData = NULL;
 	func[1].function = &netWorkInfoSetLogging;
-	
+
+    func[2].name = (const uint8_t*)"getConnectivityStatus";
+    func[2].functionData = NULL;
+    func[2].function = &networkInfoConnectivityStatus;
+
 	*functionsToSet = func;
     
     if(_networkInfoDoLogging)

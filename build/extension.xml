@@ -9,7 +9,7 @@
 //	written permission of Adobe.																	  //
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+<extension xmlns="http://ns.adobe.com/air/extension/20.0">
     <id>com.freshplanet.AirNetworkInfo</id>
     <versionNumber>1</versionNumber>
     <platforms>
