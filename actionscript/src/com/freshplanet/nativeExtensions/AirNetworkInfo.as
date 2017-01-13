@@ -93,7 +93,6 @@ package com.freshplanet.nativeExtensions
 			}
 		}
 		
-		
 		public function isConnectedWithWIFI():Boolean
 		{
 			if (this.useNativeExtension())
@@ -108,20 +107,8 @@ package com.freshplanet.nativeExtensions
 		
 		private function isNativeConnectedWithWIFI():Boolean
 		{
-			var interfaces:Vector.<NativeNetworkInterface> = this.findInterfaces();
-			
-			for(var i:uint = 0; i < interfaces.length; i++)
-			{
-				if(doLogging)
-					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active);
-				
-				if (interfaces[i].active && interfaces[i].name.toLocaleLowerCase() == "en0")
-				{
-					return true;
-				}
-			}
-			return false;
-
+			var status:int = extContext.call("getConnectivityStatus") as int;
+			return status == IOS_CONNECTED_WITH_WIFI_STATUS;
 		}
 		
 		
@@ -144,27 +131,17 @@ package com.freshplanet.nativeExtensions
 		}
 
 		
-		
-		
+		private static const IOS_NOT_CONNECTED_STATUS:int = 0;
+		private static const IOS_CONNECTED_WITH_WIFI_STATUS:int = 1;
+		private static const IOS_CONNECTED_WITH_WMAN_STATUS:int = 2;
+
 		private function hasNativeActiveConnection():Boolean
 		{
-			var interfaces:Vector.<NativeNetworkInterface> = this.findInterfaces();
-			if(interfaces.length==0)
+			var status:int = extContext.call("getConnectivityStatus") as int ;
+			if (status == IOS_CONNECTED_WITH_WMAN_STATUS || status == IOS_CONNECTED_WITH_WIFI_STATUS)
 			{
 				return true;
 			}
-
-			for(var i:uint = 0; i < interfaces.length; i++)
-			{
-				if(doLogging)
-					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active);
-				
-				if (interfaces[i].active)
-				{
-					return true;
-				}
-			}			
-			
 			return false;
 		}
 		
