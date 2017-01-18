@@ -3,31 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		14E0B0371418DFC800DA2843 /* NetworkInfoiOSLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E0B0351418DFC800DA2843 /* NetworkInfoiOSLibrary.m */; };
+		1654CB011E2E7F7E00488FF0 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1654CB001E2E7F7E00488FF0 /* FlashRuntimeExtensions.h */; };
 		39E4C13D163599C700995941 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C13B163599C700995941 /* Reachability.h */; };
 		39E4C13E163599C700995941 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E4C13C163599C700995941 /* Reachability.m */; };
-		39E4C140163599D900995941 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */; };
 		39E4C142163599E800995941 /* NetworkInfoiOSLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C141163599E800995941 /* NetworkInfoiOSLibrary.h */; };
 		5A2967A41E281240008EDEC7 /* FPANEUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A2967A21E281240008EDEC7 /* FPANEUtils.h */; };
 		5A2967A51E281240008EDEC7 /* FPANEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2967A31E281240008EDEC7 /* FPANEUtils.m */; };
-		5A7C430F153F991A005242AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7C430C153F9901005242AA /* SystemConfiguration.framework */; };
 		AA747D9F0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14E0B0351418DFC800DA2843 /* NetworkInfoiOSLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInfoiOSLibrary.m; sourceTree = "<group>"; };
+		1654CB001E2E7F7E00488FF0 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 		39E4C13B163599C700995941 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		39E4C13C163599C700995941 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = "/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/include/FlashRuntimeExtensions.h"; sourceTree = "<absolute>"; };
 		39E4C141163599E800995941 /* NetworkInfoiOSLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInfoiOSLibrary.h; sourceTree = "<group>"; };
 		5A2967A21E281240008EDEC7 /* FPANEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPANEUtils.h; sourceTree = "<group>"; };
 		5A2967A31E281240008EDEC7 /* FPANEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPANEUtils.m; sourceTree = "<group>"; };
-		5A7C430C153F9901005242AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirNetworkInfo_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libAirNetworkInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAirNetworkInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +37,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				5A7C430F153F991A005242AA /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +65,6 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5A7C430C153F9901005242AA /* SystemConfiguration.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -86,7 +82,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				39E4C13F163599D900995941 /* FlashRuntimeExtensions.h */,
+				1654CB001E2E7F7E00488FF0 /* FlashRuntimeExtensions.h */,
 				39E4C13B163599C700995941 /* Reachability.h */,
 				39E4C13C163599C700995941 /* Reachability.m */,
 				5A2967A21E281240008EDEC7 /* FPANEUtils.h */,
@@ -105,7 +101,7 @@
 			files = (
 				AA747D9F0F9514B9006C5449 /* AirNetworkInfo_Prefix.pch in Headers */,
 				39E4C13D163599C700995941 /* Reachability.h in Headers */,
-				39E4C140163599D900995941 /* FlashRuntimeExtensions.h in Headers */,
+				1654CB011E2E7F7E00488FF0 /* FlashRuntimeExtensions.h in Headers */,
 				39E4C142163599E800995941 /* NetworkInfoiOSLibrary.h in Headers */,
 				5A2967A41E281240008EDEC7 /* FPANEUtils.h in Headers */,
 			);
@@ -137,9 +133,10 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0810;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "AirNetworkInfo" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -176,7 +173,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/NetworkInfoiOSLibrary.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -186,7 +182,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AirNetworkInfo_Prefix.pch;
 				INSTALL_PATH = ../;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = AirNetworkInfo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -196,13 +192,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/NetworkInfoiOSLibrary.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AirNetworkInfo_Prefix.pch;
 				INSTALL_PATH = ../;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = AirNetworkInfo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -211,29 +206,63 @@
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.3;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.3;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

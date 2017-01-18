@@ -19,5 +19,8 @@
 -->
 <platform xmlns="http://ns.adobe.com/air/extension/20.0">
     <sdkVersion>7.0</sdkVersion>
-    <linkerOptions></linkerOptions>
+    <linkerOptions>
+        <option>-framework Foundation</option>
+        <option>-ObjC</option>
+    </linkerOptions>
 </platform>
