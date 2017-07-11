@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.freshplanet.nativeExtensions
+package com.freshplanet.ane.AirNetworkInfo
 {
 	// The NetworkInterface class describes a network interface. 
 	// It is analogous to the NetworkInfo class that is part of ActionScript 3.0.
