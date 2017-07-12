@@ -12,17 +12,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.freshplanet.ane.AirNetworkInfo
-{
+package com.freshplanet.ane.AirNetworkInfo {
+	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.StatusEvent;
 	import flash.external.ExtensionContext;
-import flash.net.InterfaceAddress;
-import flash.net.NetworkInfo;
+	import flash.net.NetworkInfo;
 	import flash.net.NetworkInterface;
 	import flash.system.Capabilities;
-
+	
 	/**
 	 *   The NetworkInfo class provides information about the network interfaces on a device.
 	 *   It is analogous to the NetworkInfo class that is part of ActionScript 3.0. However, that
@@ -31,227 +30,206 @@ import flash.net.NetworkInfo;
 	 *   The AirNetworkInfo object is a singleton.
 	 *   To get the single NetworkInfo object, use the static NetworkInfo.networkInfo property.
 	 *   Do not call the class constructor by calling new NetworkInfo().
-	 *
 	 */
-
-	
-	public class AirNetworkInfo extends EventDispatcher
-	{
+	public class AirNetworkInfo extends EventDispatcher {
+		
 		// --------------------------------------------------------------------------------------//
 		//																						 //
 		// 									   PUBLIC API										 //
 		// 																						 //
 		// --------------------------------------------------------------------------------------//
-
+		
+		/**
+		 * Determine use native implementation or AIR - use native on iOS only
+		 */
+		public static function get isSupported():Boolean {
+			return Capabilities.manufacturer.indexOf("iOS") > -1;
+		}
+		
 		/**
 		 * AirNetworkInfo instance
 		 */
-		public static function get networkInfo():AirNetworkInfo {
-
-			return _instance != null ? _instance : new AirNetworkInfo()
+		public static function get instance():AirNetworkInfo {
+			
+			return _instance != null ? _instance : new AirNetworkInfo();
 		}
-
+		
 		/**
 		 * If <code>true</code>, logs will be displayed at the ActionScript and native level.
 		 */
-		public function setLogging(value:Boolean):void
-		{
+		public function setLogging(value:Boolean):void {
+			
 			_doLogging = value;
-			if(this.useNativeExtension()) {
-				_extContext.call("setLogging", _doLogging);
-			}
+			
+			if (isSupported)
+				_context.call("setLogging", _doLogging);
 		}
-
+		
 		/**
 		 * Check the current connectivity of the device
 		 * @return True if the device is connected to internet, false otherwise.
 		 */
-		public function isConnected():Boolean
-		{
-			if (this.useNativeExtension())
-			{
-				return hasNativeActiveConnection();
-			} else
-			{
-				return hasActiveConnection();
-			}
+		public function isConnected():Boolean {
+			
+			return isSupported ? _hasNativeActiveConnection() : _hasActiveConnection();
 		}
-
+		
 		/**
 		 * Check the current WIFI connection
 		 * @return True if the device is connected to internet via WIFI, false otherwise.
 		 */
-		public function isConnectedWithWIFI():Boolean
-		{
-			if (this.useNativeExtension())
-			{
-				return checkWifiConnectionNative();
-			} else
-			{
-				return checkWifiConnectionAS3();
-			}
+		public function isConnectedWithWIFI():Boolean {
+			
+			return isSupported ? _checkWifiConnectionNative() : _checkWifiConnectionAS3();
 		}
-
+		
 		/**
 		 * Finds the network interfaces on the device.
 		 */
-		public function findInterfaces():Vector.<NativeNetworkInterface>
-		{
-			var interfacesVector:Vector.<NativeNetworkInterface>;
-			if(useNativeExtension())
-			{
-				var interfacesArray:Array = _extContext.call("getInterfaces") as Array;
+		public function findInterfaces():Vector.<NativeNetworkInterface> {
+			
+			var interfacesVector:Vector.<NativeNetworkInterface> = null;
+			
+			if (isSupported) {
+				
+				var interfacesArray:Array = _context.call("getInterfaces") as Array;
 				interfacesVector = Vector.<NativeNetworkInterface>(interfacesArray);
-
 			}
-			else
-			{
-				interfacesVector = new <NativeNetworkInterface>[];
-
+			else {
+				
 				var results:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
+				interfacesVector = new <NativeNetworkInterface>[];
+				
 				for (var i:int = 0; i < results.length; i++) {
+					
 					var networkInterface:NetworkInterface = results[i];
-					interfacesVector.push(
-							new NativeNetworkInterface(
-									networkInterface.name,
-									networkInterface.displayName,
-									networkInterface.mtu,
-									networkInterface.active,
-									networkInterface.hardwareAddress,
-									null
-							));
-
+					var nativeNetworkInterface:NativeNetworkInterface = new NativeNetworkInterface(
+							networkInterface.name, networkInterface.displayName, networkInterface.mtu,
+							networkInterface.active, networkInterface.hardwareAddress, null);
+				
+					interfacesVector.push(nativeNetworkInterface);
 				}
-
 			}
-
+			
 			return interfacesVector;
 		}
-
-
+		
 		// --------------------------------------------------------------------------------------//
 		//																						 //
 		// 									 	PRIVATE API										 //
 		// 																						 //
 		// --------------------------------------------------------------------------------------//
-
-
-
-		private static var _doLogging:Boolean = false;
-		private static var _extContext:ExtensionContext = null;
+		
+		private static const EXTENSION_ID:String                = "com.freshplanet.ane.AirNetworkInfo";
+		private static const IOS_NOT_CONNECTED_STATUS:int       = 0;
+		private static const IOS_CONNECTED_WITH_WIFI_STATUS:int = 1;
+		private static const IOS_CONNECTED_WITH_WMAN_STATUS:int = 2;
+		
 		private static var _instance:AirNetworkInfo = null;
-
+		
+		private var _context:ExtensionContext = null;
+		private var _doLogging:Boolean        = false;
+		
 		/**
 		 * "private" singleton constructor
 		 */
-		public function AirNetworkInfo()
-		{
-			// The NetworkInfo object is a singleton. 
-			// To get the single NetworkInfo object, use the static NetworkInfo.networkInfo property. 
-			// Do not use new NetworkInfo() in the application that uses this class.			
-			_extContext = ExtensionContext.createExtensionContext("com.freshplanet.AirNetworkInfo", "net");
-			if(!useNativeExtension()) {
-				NetworkInfo.networkInfo.addEventListener("networkChange", onNetworkChange);
-			} else if (_extContext) {
-				_extContext.addEventListener(StatusEvent.STATUS, onStatusEvent);
-			}
+		public function AirNetworkInfo() {
+			
+			super();
+			
+			if (_instance)
+				throw Error("this is a singleton, use .instance, do not call the constructor directly");
+			
 			_instance = this;
+			
+			if (!isSupported)
+				NetworkInfo.networkInfo.addEventListener("networkChange", _onNetworkChange);
+			else {
+				
+				_context = ExtensionContext.createExtensionContext(EXTENSION_ID, null);
+				
+				if (!_context)
+					trace("ERROR", "Extension context is null. Please check if extension.xml is setup correctly.");
+				else
+					_context.addEventListener(StatusEvent.STATUS, _onStatusEvent);
+			}
 		}
-
+		
 		/**
 		 * Status event listener
 		 * @param e
 		 */
-		private function onStatusEvent(e:StatusEvent):void 
-		{
+		private function _onStatusEvent(e:StatusEvent):void {
+			
 			this.dispatchEvent(new Event(e.code));
 		}
-
+		
 		/**
 		 * Network changed listener
 		 * @param e
 		 */
-		private function onNetworkChange(e:Event):void 
-		{
+		private function _onNetworkChange(e:Event):void {
+			
 			this.dispatchEvent(e);
 		}
-
+		
 		/**
 		 * Helper function for checking wifi connectivity natively
 		 */
-		private function checkWifiConnectionNative():Boolean
-		{
-			var status:int = _extContext.call("getConnectivityStatus") as int;
+		private function _checkWifiConnectionNative():Boolean {
+			
+			var status:int = _context.call("getConnectivityStatus") as int;
 			return status == IOS_CONNECTED_WITH_WIFI_STATUS;
 		}
-
+		
 		/**
 		 * Helper function for checking wifi connectivity via AIR
 		 */
-		private function checkWifiConnectionAS3():Boolean
-		{
+		private function _checkWifiConnectionAS3():Boolean {
+			
 			var interfaces:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
 			
-			for(var i:uint = 0; i < interfaces.length; i++)
-			{
-				if(_doLogging)
+			for (var i:uint = 0; i < interfaces.length; i++) {
+				
+				if (_doLogging)
 					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].active);
 				
 				if (interfaces[i].active && ["en0", "wifi"].indexOf(interfaces[i].name.toLocaleLowerCase()) > -1)
-				{
 					return true;
-				}
 			}
-			return false;
 			
+			return false;
 		}
-
 		
-		private static const IOS_NOT_CONNECTED_STATUS:int = 0;
-		private static const IOS_CONNECTED_WITH_WIFI_STATUS:int = 1;
-		private static const IOS_CONNECTED_WITH_WMAN_STATUS:int = 2;
-
 		/**
 		 * Helper function for checking internet connectivity natively
 		 */
-		private function hasNativeActiveConnection():Boolean
-		{
-			var status:int = _extContext.call("getConnectivityStatus") as int ;
-			if (status == IOS_CONNECTED_WITH_WMAN_STATUS || status == IOS_CONNECTED_WITH_WIFI_STATUS)
-			{
-				return true;
-			}
-			return false;
+		private function _hasNativeActiveConnection():Boolean {
+			
+			var status:int     = _context.call("getConnectivityStatus") as int;
+			var active:Boolean = status == IOS_CONNECTED_WITH_WMAN_STATUS || status == IOS_CONNECTED_WITH_WIFI_STATUS;
+			
+			return active;
 		}
-
+		
 		/**
 		 * Helper function for checking internet connectivity via AIR
 		 */
-		private function hasActiveConnection():Boolean
-		{
+		private function _hasActiveConnection():Boolean {
+			
 			var interfaces:Vector.<NetworkInterface> = NetworkInfo.networkInfo.findInterfaces();
 			
-			for(var i:uint = 0; i < interfaces.length; i++)
-			{
-				if(_doLogging)
+			for (var i:uint = 0; i < interfaces.length; i++) {
+				
+				if (_doLogging)
 					trace("[Network Info]", interfaces[i].name.toLowerCase(), interfaces[i].displayName, interfaces[i].active);
 				
 				if (interfaces[i].active)
-				{
 					return true;
-				}
 			}
+			
 			return false;
 		}
-
-		/**
-		 * Determine use native implementation or AIR - use native on iOS only
-		 */
-		private function useNativeExtension():Boolean
-		{
-			return Capabilities.manufacturer.indexOf("iOS") > -1;
-		}
-		
 	}
 }
 

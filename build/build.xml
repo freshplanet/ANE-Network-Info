@@ -3,6 +3,13 @@
 
     <!-- Config -->
     <property file="build.config"/>
+    
+    <!-- Load ant-contrib -->
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="ant-contrib-0.6.jar"/>
+        </classpath>
+    </taskdef>
 
     <!-- All -->
     <target name="all" depends="ios,swc,package" description="Full build of extension"/>
@@ -11,28 +18,54 @@
     <target name="ios" description="Build iOS Library">
 
         <!-- make the build directory for the objc code -->
-        <mkdir dir="temp/ios/"/>
+        <mkdir dir="temp/ios"/>
 
         <!-- clean the build -->
-        <exec executable="xcodebuild" failonerror="true" dir="../ios/">
-            <arg line="-project ${name}.xcodeproj"/>
-            <arg line="-alltargets clean"/>
+        <exec executable="xcodebuild" failonerror="true" dir="../ios">
+            <arg line="-workspace ${name}.xcworkspace"/>
+            <arg line="-scheme ${name}"/>
+            <arg line="clean"/>
         </exec>
 
         <!-- compile the ios lib -->
-        <exec executable="xcodebuild" failonerror="true" dir="../ios/">
-            <arg line="-project ${name}.xcodeproj"/>
+        <exec executable="xcodebuild" failonerror="true" dir="../ios">
+            <arg line="-workspace ${name}.xcworkspace"/>
+            <arg line="-scheme ${name}"/>
             <arg line="-sdk iphoneos"/>
-            <arg line="-alltargets"/>
             <arg line="-configuration Release"/>
-            <arg line="SYMROOT=../build/temp/ios/build/"/>
+            <arg line="SYMROOT=$(PWD)/../ios/build"/>
         </exec>
 
-        <!-- copy the ios lib to the base temp ios directory -->
-        <copy file="temp/ios/build/Release-iphoneos/lib${name}.a" todir="temp/ios" overwrite="true"/>
+        <!-- copy the libs and resources to the base temp ios directory -->
+        <copy todir="temp/ios" overwrite="true" includeEmptyDirs="false" flatten="true">
+            <fileset dir="../ios/">
+                <include name="build/Release-iphoneos/**/*"/>
+                <exclude name="**/*Pods-${name}*"/>
+                <exclude name="**/*.bundle/"/>
+                <exclude name="**/*.nib/"/>
+                <exclude name="**/*.h"/>
+            </fileset>
+        </copy>
+
+        <!-- copy over necessary frameworks, bundles, etc -->
+        <for param="path">
+            <path>
+                <dirset dir="../ios/">
+                    <include name="build/Release-iphoneos/**/*.bundle"/>
+                    <include name="build/Release-iphoneos/**/*.nib"/>
+                    <include name="**/*.framework"/>
+                </dirset>
+            </path>
+            <sequential>
+                <propertyregex property="folder.name" override="true" input="@{path}" regexp=".+\/(.+)" select="\1"/>
+                <copy todir="temp/ios/${folder.name}" overwrite="true" includeEmptyDirs="false" flatten="true">
+                    <fileset dir="@{path}"/>
+                </copy>
+            </sequential>
+        </for>
 
         <!-- remove the build directory -->
-        <delete dir="temp/ios/build/"/>
+        <delete dir="../ios/build/"/>
     </target>
 
     <!-- Actionscript -->

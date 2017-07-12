@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2017 FreshPlanet
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,9 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 #import <Foundation/Foundation.h>
-#import "FPANEUtils.h"
+#import "../FPANEUtils.h"
 
 @class Reachability;
 
@@ -25,7 +24,7 @@
 
 @end
 
-void NetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet);
-void NetworkInfoContextFinalizer(FREContext ctx);
-void NetworkInfoInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet);
-void NetworkInfoFinalizer(void *extData);
+void AirNetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet);
+void AirNetworkInfoContextFinalizer(FREContext ctx);
+void AirNetworkInfoInitializer(void** extDataToSet, FREContextInitializer* ctxInitializerToSet, FREContextFinalizer* ctxFinalizerToSet);
+void AirNetworkInfoFinalizer(void* extData);
