@@ -42,7 +42,7 @@
 
     <!-- Identifies the ActionScript extensions used by an application. -->
     <extensions>
-        <extensionID>com.freshplanet.AirNetworkInfo</extensionID>
+        <extensionID>com.freshplanet.ane.AirNetworkInfo</extensionID>
     </extensions>
 
     <!-- Settings for the application's initial window. Required. -->

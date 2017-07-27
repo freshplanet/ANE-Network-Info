@@ -14,6 +14,8 @@
  */
 #import <Foundation/Foundation.h>
 #import "../FPANEUtils.h"
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 @class Reachability;
 

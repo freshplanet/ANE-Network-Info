@@ -14,11 +14,11 @@
  */
 package {
 
-import com.freshplanet.nativeExtensions.AirNetworkInfo;
-import com.freshplanet.nativeExtensions.NativeNetworkInterface;
 
-import con.freshplanet.ui.ScrollableContainer;
-import con.freshplanet.ui.TestBlock;
+import com.freshplanet.ane.AirNetworkInfo.AirNetworkInfo;
+import com.freshplanet.ane.AirNetworkInfo.NativeNetworkInterface;
+import com.freshplanet.ui.ScrollableContainer;
+import com.freshplanet.ui.TestBlock;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
@@ -49,13 +49,16 @@ public class Main extends Sprite {
         var blocks:Array = [];
 
         blocks.push(new TestBlock("isConnected", function():void {
-            trace("isConnected", AirNetworkInfo.networkInfo.isConnected());
+            trace("isConnected", AirNetworkInfo.instance.isConnected);
         }));
         blocks.push(new TestBlock("isConnectedWithWIFI", function():void {
-            trace("isConnectedWithWIFI ", AirNetworkInfo.networkInfo.isConnectedWithWIFI());
+            trace("isConnectedWithWIFI ", AirNetworkInfo.instance.isConnectedWithWIFI);
+        }));
+        blocks.push(new TestBlock("carrierName", function():void {
+            trace("carrierName ", AirNetworkInfo.instance.carrierName);
         }));
         blocks.push(new TestBlock("findInterfaces", function():void {
-            var interfaces:Vector.<NativeNetworkInterface> = AirNetworkInfo.networkInfo.findInterfaces();
+            var interfaces:Vector.<NativeNetworkInterface> = AirNetworkInfo.instance.findInterfaces();
             for (var i:int = 0; i < interfaces.length; i++) {
                 var networkInterface:NativeNetworkInterface = interfaces[i];
                 trace("Network interface : ");

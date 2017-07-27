@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		16A48D721F1571060033E36D /* AirNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A48D711F1571060033E36D /* AirNetworkInfo.m */; };
 		16A48D731F1571060033E36D /* AirNetworkInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16A48D701F1571060033E36D /* AirNetworkInfo.h */; };
+		A25CC7CA1F2A3B8000FE4B3F /* FPANEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CC7C91F2A3B8000FE4B3F /* FPANEUtils.m */; };
+		A25CC7CD1F2A3B8500FE4B3F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CC7CC1F2A3B8500FE4B3F /* Reachability.m */; };
 		D17148572BD4317DA47EE8C7 /* libPods-AirNetworkInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1459DC4D2B43044CEFF58565 /* libPods-AirNetworkInfo.a */; };
 /* End PBXBuildFile section */
 
@@ -31,12 +33,12 @@
 		16A48D6D1F1571060033E36D /* libAirNetworkInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAirNetworkInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		16A48D701F1571060033E36D /* AirNetworkInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirNetworkInfo.h; sourceTree = "<group>"; };
 		16A48D711F1571060033E36D /* AirNetworkInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirNetworkInfo.m; sourceTree = "<group>"; };
-		16A740EE1F15735C00D8FD37 /* FPANEUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPANEUtils.h; sourceTree = "<group>"; };
-		16A740EF1F15735C00D8FD37 /* FPANEUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPANEUtils.m; sourceTree = "<group>"; };
-		16A740F01F15735C00D8FD37 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
-		16A740F11F1573C200D8FD37 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		16A740F21F1573C200D8FD37 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		2CB92147D4CA1213118B09E8 /* Pods-AirNetworkInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirNetworkInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirNetworkInfo/Pods-AirNetworkInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		A25CC7C71F2A3B8000FE4B3F /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		A25CC7C81F2A3B8000FE4B3F /* FPANEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPANEUtils.h; sourceTree = "<group>"; };
+		A25CC7C91F2A3B8000FE4B3F /* FPANEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPANEUtils.m; sourceTree = "<group>"; };
+		A25CC7CB1F2A3B8500FE4B3F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A25CC7CC1F2A3B8500FE4B3F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,9 @@
 		16A48D641F1571060033E36D = {
 			isa = PBXGroup;
 			children = (
-				16A740F01F15735C00D8FD37 /* FlashRuntimeExtensions.h */,
-				16A740EE1F15735C00D8FD37 /* FPANEUtils.h */,
-				16A740EF1F15735C00D8FD37 /* FPANEUtils.m */,
+				A25CC7C71F2A3B8000FE4B3F /* FlashRuntimeExtensions.h */,
+				A25CC7C81F2A3B8000FE4B3F /* FPANEUtils.h */,
+				A25CC7C91F2A3B8000FE4B3F /* FPANEUtils.m */,
 				16A48D6F1F1571060033E36D /* AirNetworkInfo */,
 				16A48D6E1F1571060033E36D /* Products */,
 				C277F7E960760F7CFB4C037C /* Pods */,
@@ -75,8 +77,8 @@
 		16A48D6F1F1571060033E36D /* AirNetworkInfo */ = {
 			isa = PBXGroup;
 			children = (
-				16A740F11F1573C200D8FD37 /* Reachability.h */,
-				16A740F21F1573C200D8FD37 /* Reachability.m */,
+				A25CC7CB1F2A3B8500FE4B3F /* Reachability.h */,
+				A25CC7CC1F2A3B8500FE4B3F /* Reachability.m */,
 				16A48D701F1571060033E36D /* AirNetworkInfo.h */,
 				16A48D711F1571060033E36D /* AirNetworkInfo.m */,
 			);
@@ -192,6 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25CC7CA1F2A3B8000FE4B3F /* FPANEUtils.m in Sources */,
+				A25CC7CD1F2A3B8500FE4B3F /* Reachability.m in Sources */,
 				16A48D721F1571060033E36D /* AirNetworkInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

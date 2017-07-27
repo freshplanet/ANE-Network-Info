@@ -43,14 +43,13 @@ package com.freshplanet.ane.AirNetworkInfo {
 		 * Determine use native implementation or AIR - use native on iOS only
 		 */
 		public static function get isSupported():Boolean {
-			return Capabilities.manufacturer.indexOf("iOS") > -1;
+			return isIOS || isAndroid;
 		}
 		
 		/**
 		 * AirNetworkInfo instance
 		 */
 		public static function get instance():AirNetworkInfo {
-			
 			return _instance != null ? _instance : new AirNetworkInfo();
 		}
 		
@@ -58,29 +57,25 @@ package com.freshplanet.ane.AirNetworkInfo {
 		 * If <code>true</code>, logs will be displayed at the ActionScript and native level.
 		 */
 		public function setLogging(value:Boolean):void {
-			
 			_doLogging = value;
-			
-			if (isSupported)
-				_context.call("setLogging", _doLogging);
 		}
 		
 		/**
 		 * Check the current connectivity of the device
 		 * @return True if the device is connected to internet, false otherwise.
 		 */
-		public function isConnected():Boolean {
+		public function get isConnected():Boolean {
 			
-			return isSupported ? _hasNativeActiveConnection() : _hasActiveConnection();
+			return isIOS ? _hasNativeActiveConnection() : _hasActiveConnection();
 		}
 		
 		/**
 		 * Check the current WIFI connection
 		 * @return True if the device is connected to internet via WIFI, false otherwise.
 		 */
-		public function isConnectedWithWIFI():Boolean {
+		public function get isConnectedWithWIFI():Boolean {
 			
-			return isSupported ? _checkWifiConnectionNative() : _checkWifiConnectionAS3();
+			return isIOS ? _checkWifiConnectionNative() : _checkWifiConnectionAS3();
 		}
 		
 		/**
@@ -90,9 +85,10 @@ package com.freshplanet.ane.AirNetworkInfo {
 			
 			var interfacesVector:Vector.<NativeNetworkInterface> = null;
 			
-			if (isSupported) {
+			if (isIOS) {
 				
 				var interfacesArray:Array = _context.call("getInterfaces") as Array;
+				trace("GOT INTERFACES ", interfacesArray);
 				interfacesVector = Vector.<NativeNetworkInterface>(interfacesArray);
 			}
 			else {
@@ -112,6 +108,13 @@ package com.freshplanet.ane.AirNetworkInfo {
 			}
 			
 			return interfacesVector;
+		}
+
+		public function get carrierName():String {
+			if (isSupported)
+				return _context.call("getCarrierName") as String;
+
+			return null;
 		}
 		
 		// --------------------------------------------------------------------------------------//
@@ -142,9 +145,10 @@ package com.freshplanet.ane.AirNetworkInfo {
 			
 			_instance = this;
 			
-			if (!isSupported)
+			if (isAndroid)
 				NetworkInfo.networkInfo.addEventListener("networkChange", _onNetworkChange);
-			else {
+
+			if(isSupported) {
 				
 				_context = ExtensionContext.createExtensionContext(EXTENSION_ID, null);
 				
@@ -229,6 +233,14 @@ package com.freshplanet.ane.AirNetworkInfo {
 			}
 			
 			return false;
+		}
+
+		private static function get isIOS():Boolean {
+			return Capabilities.manufacturer.indexOf("iOS") > -1;
+		}
+
+		private static function get isAndroid():Boolean {
+			return Capabilities.manufacturer.indexOf("Android") > -1;
 		}
 	}
 }

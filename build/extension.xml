@@ -9,7 +9,7 @@
 //	written permission of Adobe.																	  //
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-<extension xmlns="http://ns.adobe.com/air/extension/22.0">
+<extension xmlns="http://ns.adobe.com/air/extension/20.0">
     <id>com.freshplanet.ane.AirNetworkInfo</id>
     <versionNumber>1</versionNumber>
     <platforms>
@@ -20,9 +20,13 @@
                 <finalizer>AirNetworkInfoFinalizer</finalizer>
             </applicationDeployment>
         </platform>
-        
-        <platform name="Android-ARM"> 
-            <applicationDeployment/> 
+
+        <platform name="Android-ARM">
+            <applicationDeployment>
+                <nativeLibrary>libAirNetworkInfo.jar</nativeLibrary>
+                <initializer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</initializer>
+                <finalizer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</finalizer>
+            </applicationDeployment>
         </platform>
         
         <platform name="default"> 
