@@ -20,6 +20,11 @@ android/lint.xml
 proguard-project.txt
 project.properties
 
+# IntelliJ
+*.iml
+*.idea
+*/out
+
 # Xcode
 xcuserdata
 
