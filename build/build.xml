@@ -42,7 +42,6 @@
                 <include name="build/Release-iphoneos/**/*"/>
                 <exclude name="**/*Pods-${name}*"/>
                 <exclude name="**/*.bundle/"/>
-                <exclude name="**/*.nib/"/>
                 <exclude name="**/*.h"/>
             </fileset>
         </copy>
@@ -52,7 +51,6 @@
             <path>
                 <dirset dir="../ios/">
                     <include name="build/Release-iphoneos/**/*.bundle"/>
-                    <include name="build/Release-iphoneos/**/*.nib"/>
                     <include name="**/*.framework"/>
                 </dirset>
             </path>
