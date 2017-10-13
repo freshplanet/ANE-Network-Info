@@ -84,133 +84,6 @@
 
 @end
 
-//FREObject getInterfaceProperties(struct ifaddrs* ifa, FREObject NetworkInterfaceArray) {
-//    
-//    void* tmpAddrPtr = NULL;
-//    void* tmpbroadPtr = NULL;
-//    char* iPVersion = "IPV4";
-//    int PrefixLength = -1;
-//    
-//    FREObject InterfaceAddrsArray[4];
-//    
-//    FREObject Addrstemp = nil;
-//    BOOL state = FALSE;
-//    
-//    if (ifa->ifa_addr->sa_family == AF_INET) {
-//        
-//        // If the address is a valid IP4 Address, get its properties and put them into the InterfaceAddrsArray.
-//        
-//        tmpAddrPtr = &((struct sockaddr_in*) ifa->ifa_addr)->sin_addr;
-//        char addressBuffer[INET_ADDRSTRLEN];
-//        inet_ntop(AF_INET, tmpAddrPtr, addressBuffer, INET_ADDRSTRLEN);
-//        tmpbroadPtr = &((struct sockaddr_in*) ifa->ifa_broadaddr)->sin_addr;
-//        
-//        //
-//        // I haven't found any clear way to determine if the interface is active.
-//        // The issue is that the IFM_ACTIVE flag indicates whether the interface is up and running,
-//        // but the IFM_ACTIVE flag does not exist on iOS.
-//        //
-//        // Furthermore, the IFF_UP and IFF_RUNNING flags are not sufficient to determine the state of interface.
-//        // These flags fail to indicate the correct status when the WIFI is down.
-//        
-//        // Therefore, the following code determines the availability of the cellular network and Wifi.
-//        // Only this information is used to determine whether the interface is active.
-//        // Note: The code assumes that the Wifi address is represented by "en0"
-//        // and the cellular network is represented by "pdp_xxx".
-//        
-//        // Create a zero address socket to determine if a connection is available.
-//        // If a connection is available, then either the Wifi or Cellular network or both are active.
-//        // Other flags are used to find out which network is active.
-//        
-//        struct sockaddr_in zeroAddress;
-//        bzero(&zeroAddress, sizeof(zeroAddress));
-//        zeroAddress.sin_len = sizeof(zeroAddress);
-//        zeroAddress.sin_family = AF_INET;
-//        SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr*) &zeroAddress);
-//        SCNetworkReachabilityFlags flags;
-//        
-//        BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
-//        CFRelease(defaultRouteReachability);
-//        
-//        if (!didRetrieveFlags)
-//            return NULL;
-//        
-//        BOOL isReachable = flags & kSCNetworkFlagsReachable;
-//        BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
-//        BOOL status = (isReachable && !needsConnection) ? YES : NO;
-//        
-//        if (status) {
-//            
-//            if (strcmp(ifa->ifa_name, "en0") == 0) {
-//                
-//                if (!(flags & kSCNetworkReachabilityFlagsIsWWAN)) {
-//                    
-//                    state = TRUE;
-//                    FRENewObjectFromBool(state, &NetworkInterfaceArray[3]);
-//                }
-//            } else {
-//                
-//                char* InterfaceStringPtr = ifa->ifa_name;
-//                NSString* string1 = [NSString stringWithCString:InterfaceStringPtr encoding:NSUTF8StringEncoding];
-//                
-//                if ([string1 rangeOfString:@"pdp"].location != NSNotFound) {
-//                    
-//                    if ((flags & kSCNetworkReachabilityFlagsIsWWAN)) {
-//                        
-//                        state = TRUE;
-//                        FRENewObjectFromBool(state, &NetworkInterfaceArray[3]);
-//                    }
-//                }
-//            }
-//        }
-//        
-//        char broadCastAddressBuffer[INET_ADDRSTRLEN];
-//        inet_ntop(AF_INET, tmpbroadPtr, broadCastAddressBuffer, INET_ADDRSTRLEN);
-//        
-//        // Create a new ActionScript object for the IP address, and put it in InterfaceAddrsArray.
-//        FRENewObjectFromUTF8(INET_ADDRSTRLEN, (const uint8_t*) addressBuffer, &InterfaceAddrsArray[0]);
-//        
-//        // Create a new ActionScript object for the broadcast address, and put it in InterfaceAddrsArray.
-//        FRENewObjectFromUTF8(INET_ADDRSTRLEN, (const uint8_t*) broadCastAddressBuffer, &InterfaceAddrsArray[1]);
-//        
-//        // Create a new ActionScript object for the prefix length, and put it in InterfaceAddrsArray.
-//        // Note: The PrefixLength is not currently supported. It has the value -1.
-//        FRENewObjectFromInt32(PrefixLength, &InterfaceAddrsArray[2]);
-//        
-//        // Create a new ActionScript object for the ip version, and put it in InterfaceAddrsArray.
-//        iPVersion = "IPV4";
-//        FRENewObjectFromUTF8(32, (const uint8_t*) iPVersion, &InterfaceAddrsArray[3]);
-//    } else if (ifa->ifa_addr->sa_family == AF_INET6) {
-//        
-//        // else if the address is a valid IP6 Address, get its properties and put them into the InterfaceAddrsArray.
-//        tmpAddrPtr = &((struct sockaddr_in*) ifa->ifa_addr)->sin_addr;
-//        char addressBuffer[INET6_ADDRSTRLEN];
-//        inet_ntop(AF_INET6, tmpAddrPtr, addressBuffer, INET6_ADDRSTRLEN);
-//        
-//        char* broadCastForIpv6 = "";
-//        // A broadcast address is not applicable in IPV6
-//        
-//        // Create a new ActionScript object for the IP address, and put it in InterfaceAddrsArray.
-//        FRENewObjectFromUTF8(INET6_ADDRSTRLEN, (const uint8_t*) addressBuffer, &InterfaceAddrsArray[0]);
-//        
-//        // Create a new ActionScript object for the broadcast address, and put it in InterfaceAddrsArray.
-//        FRENewObjectFromUTF8(INET_ADDRSTRLEN, (const uint8_t*) broadCastForIpv6, &InterfaceAddrsArray[1]);
-//        
-//        // Create a new ActionScript object for the prefix length, and put it in InterfaceAddrsArray.
-//        // Note: The PrefixLength is not currently supported. It has the value -1.
-//        FRENewObjectFromInt32(PrefixLength, &InterfaceAddrsArray[2]);
-//        
-//        // Create a new ActionScript object for the ip version, and put it in InterfaceAddrsArray.
-//        iPVersion = "IPV6";
-//        FRENewObjectFromUTF8(32, (const uint8_t*) iPVersion, &InterfaceAddrsArray[3]);
-//    }
-//    
-//    // Create an ActionScript InterfaceAddress object. InterfaceAddrsArray contains the parameters to the constructor.
-//    // Addrstemp is the corresponding FREObject for the new ActionScript object.
-//    FRENewObject((const uint8_t*) "com.freshplanet.nativeExtensions.InterfaceAddress", 4, InterfaceAddrsArray, &Addrstemp, nil);
-//    
-//    return Addrstemp;
-//}
 
 DEFINE_ANE_FUNCTION(getInterfaces) {
     
@@ -383,10 +256,10 @@ DEFINE_ANE_FUNCTION(getConnectivityStatus) {
     NetworkInfoiOSLibrary* networkLib = (__bridge NetworkInfoiOSLibrary*) controller;
     
     if (!controller)
-        return FPANE_CreateError(@"context's NetworkInfoiOSLibrary is null", 0);
+        return AirNetworkInfo_FPANE_CreateError(@"context's NetworkInfoiOSLibrary is null", 0);
     
     int netStatus = [networkLib getConnectivityStatus];
-    FREObject freObj = FPANE_IntToFREObject(netStatus);
+    FREObject freObj = AirNetworkInfo_FPANE_IntToFREObject(netStatus);
     
     return freObj;
 }
@@ -399,7 +272,7 @@ DEFINE_ANE_FUNCTION(getCarrierName) {
     
     NSString *carrierName = [carrier carrierName];
     
-    return FPANE_NSStringToFREObject(carrierName);
+    return AirNetworkInfo_FPANE_NSStringToFREObject(carrierName);
 }
 
 void AirNetworkInfoContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToSet, const FRENamedFunction** functionsToSet) {
