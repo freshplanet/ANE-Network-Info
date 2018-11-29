@@ -14,7 +14,7 @@
  */-->
 
 <platform xmlns="http://ns.adobe.com/air/extension/22.0">
-    <sdkVersion>9.0</sdkVersion>
+    <sdkVersion>10.0</sdkVersion>
     <linkerOptions>
         <option>-framework Foundation</option>
         <option>-framework CoreTelephony</option>
