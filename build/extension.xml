@@ -33,6 +33,22 @@
                 <finalizer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</finalizer>
             </applicationDeployment>
         </platform>
+
+        <platform name="Android-ARM64">
+            <applicationDeployment>
+                <nativeLibrary>libAirNetworkInfo.jar</nativeLibrary>
+                <initializer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</initializer>
+                <finalizer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</finalizer>
+            </applicationDeployment>
+        </platform>
+
+        <platform name="Android-x86">
+            <applicationDeployment>
+                <nativeLibrary>libAirNetworkInfo.jar</nativeLibrary>
+                <initializer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</initializer>
+                <finalizer>com.freshplanet.ane.AirNetworkInfo.AirNetworkInfoExtension</finalizer>
+            </applicationDeployment>
+        </platform>
         
         <platform name="default"> 
             <applicationDeployment/> 
