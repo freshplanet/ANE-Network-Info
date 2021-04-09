@@ -54,7 +54,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleNetworkChange:)
-                                                 name:kReachabilityChangedNotification
+                                                 name:kAirNetworkInfoReachabilityChangedNotification
                                                object:nil];
     
     if (_reachability)
